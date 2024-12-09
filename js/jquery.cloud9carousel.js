@@ -188,8 +188,9 @@
         var item = this.renderItem( i, radians );
 
         if( i === nearest ){
-          console.log($(item.element));
-          $(item.element).addClass( "frontItemClass" );}
+          // console.log($(item.element));
+          $(item.element).addClass( "frontItemClass" );
+        }
         else
           $(item.element).removeClass( "frontItemClass" );
 
@@ -257,6 +258,7 @@
     this.pause = function() {
       this.smooth && cancelFrame ? cancelFrame( this.timer ) : clearTimeout( this.timer );
       this.timer = 0;
+      showPlanet();
     }
 
     //
